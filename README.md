@@ -1,33 +1,23 @@
-OnlineFoodOrderingSystem/
-│
-├── Main.java                    # Composition root and entry point
-├── TomatoApp.java                # Facade class (main orcjavaestrator)
-│
-├── models/
-│   ├── MenuItem.java
-│   ├── Restaurant.java
-│   ├── User.java
-│   ├── Cart.java
-│   ├── Order.java                # Abstract Order
-│   ├── DeliveryOrder.java
-│   ├── PickupOrder.java
-│
-├── managers/
-│   ├── RestaurantManager.java
-│   ├── OrderManager.java
-│
-├── strategies/
-│   ├── PaymentStrategy.java      # Base class
-│   ├── CreditCardPaymentStrategy.java
-│   ├── UpiPaymentStrategy.java
-│
-├── factories/
-│   ├── OrderFactory.java         # Abstract factory
-│   ├── NowOrderFactory.java
-│   ├── ScheduledOrderFactory.java
-│
-├── services/
-│   └── NotificationService.java
-│
-├── utils/
-│   └── TimeUtils.java
+
+---
+
+## ✨ Features Implemented
+
+- ✅ **Restaurant Management** (add/search restaurants)  
+- ✅ **Menu & Cart Management** (add items, view cart, total cost)  
+- ✅ **Orders** (Now Orders & Scheduled Orders using Factory Pattern)  
+- ✅ **Payments** (UPI / Credit Card using Strategy Pattern)  
+- ✅ **Notifications** after successful payment  
+- ✅ **Singleton Managers** for shared state across app  
+
+---
+
+## 🛠️ Design Patterns Used
+
+- **Singleton** → `RestaurantManager`, `OrderManager`  
+- **Factory Method** → `OrderFactory`, `NowOrderFactory`, `ScheduledOrderFactory`  
+- **Strategy** → `PaymentStrategy` (UPI, CreditCard)  
+- **Facade** → `TomatoApp` (exposes simplified interface for ordering)  
+
+---
+
